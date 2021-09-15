@@ -1,0 +1,7 @@
+torch==1.6.0
+pytorch_lightning
+matplotlib
+jieba
+pandas
+sentence_transformers
+tqdm

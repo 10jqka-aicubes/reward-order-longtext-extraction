@@ -1,0 +1,30 @@
+common:
+  use_cuda: true
+  output_root_dir: /root/work/kg_deep_prod_cyx/kg_deep_prod/examples/block_tag/etc/
+
+  classification_question: 诉讼仲裁
+
+prepare:
+  input_patterns: []
+
+train:
+  gradient_accumulation_steps: 1
+  train_batch_size: 20
+  logging_steps: 200
+  saving_steps: 200
+  num_train_epochs: 1000
+  best_index: f1
+
+model:
+  num_layers: 1
+  embedding_size: 768
+
+export:
+  export_mode: best
+
+
+evaluate:
+  eval_batch_size: 1
+
+predict:
+  production_batch_size: 1
